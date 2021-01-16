@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
+
+body {
+    background-image: url(./fc.jpg);
+    background-size: cover;
+    min-height: 550px;
+    font-family: 'Mukta', sans-serif;
+}
+
+.timer-wrapper {
+    margin-top: 40px;
+    margin-left: 0;
+}
+  
+button {
+    width: 150px;
+    background: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+button + button {
+    margin-left:280px;
+}
+
+.text {
+    font-family: 'Mukta', sans-serif;
+}
+
+.time-info {
+    color: white;
+    margin-top: 10px;
+    margin-left: 19%;
+}
+
+.buttons {
+    margin-left: 180px;
+}
