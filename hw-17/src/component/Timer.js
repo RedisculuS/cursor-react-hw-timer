@@ -10,18 +10,22 @@ function Timer({time, step, autostart}) {
             if(counter > 0 && start === true){
                 setCounter(counter-interval)
         }}, step)
-        return timer;
+        return () => {
+            clearTimeout(timer)
+        };
     });
+
+    const onStartHandler = () => {
+        setStart(true);
+        if(!counter){
+            setCounter(time)
+        }
+    }
 
     return (
         <div className="timer-wrapper">
             <div className="buttons">
-                <button  onClick = {() => {
-                    setStart(true);
-                    if(counter === 0 ){
-                        setCounter(time) 
-                    }
-                }}>
+                <button  onClick = {onStartHandler}>
                 <span className="text"> Start </span>
                 </button> 
                 <button onClick = {() => {
